@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +20,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    MainTabBarController *vc = [[MainTabBarController alloc] init];
     self.window.rootViewController = vc;
     
     return YES;
