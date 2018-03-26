@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		36065A4CFA16600DA913D725 /* Pods_iOSProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23D90B39139BA64025F87DA /* Pods_iOSProjectTests.framework */; };
 		732079152068DE7900F43EB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079142068DE7900F43EB9 /* AppDelegate.m */; };
-		732079182068DE7900F43EB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079172068DE7900F43EB9 /* ViewController.m */; };
-		7320791B2068DE7900F43EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 732079192068DE7900F43EB9 /* Main.storyboard */; };
 		7320791D2068DE7900F43EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7320791C2068DE7900F43EB9 /* Assets.xcassets */; };
 		732079202068DE7900F43EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7320791E2068DE7900F43EB9 /* LaunchScreen.storyboard */; };
 		732079232068DE7900F43EB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079222068DE7900F43EB9 /* main.m */; };
@@ -45,9 +43,6 @@
 		732079102068DE7900F43EB9 /* iOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		732079132068DE7900F43EB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		732079142068DE7900F43EB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		732079162068DE7900F43EB9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		732079172068DE7900F43EB9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7320791A2068DE7900F43EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7320791C2068DE7900F43EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7320791F2068DE7900F43EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		732079212068DE7900F43EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,9 +125,6 @@
 			children = (
 				732079132068DE7900F43EB9 /* AppDelegate.h */,
 				732079142068DE7900F43EB9 /* AppDelegate.m */,
-				732079162068DE7900F43EB9 /* ViewController.h */,
-				732079172068DE7900F43EB9 /* ViewController.m */,
-				732079192068DE7900F43EB9 /* Main.storyboard */,
 				7320791C2068DE7900F43EB9 /* Assets.xcassets */,
 				7320791E2068DE7900F43EB9 /* LaunchScreen.storyboard */,
 				732079212068DE7900F43EB9 /* Info.plist */,
@@ -289,7 +281,6 @@
 			files = (
 				732079202068DE7900F43EB9 /* LaunchScreen.storyboard in Resources */,
 				7320791D2068DE7900F43EB9 /* Assets.xcassets in Resources */,
-				7320791B2068DE7900F43EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +461,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				732079182068DE7900F43EB9 /* ViewController.m in Sources */,
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
 			);
@@ -508,14 +498,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		732079192068DE7900F43EB9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7320791A2068DE7900F43EB9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7320791E2068DE7900F43EB9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
