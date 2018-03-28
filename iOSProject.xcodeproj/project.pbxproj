@@ -15,6 +15,9 @@
 		7320792D2068DE7900F43EB9 /* iOSProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7320792C2068DE7900F43EB9 /* iOSProjectTests.m */; };
 		732079382068DE7900F43EB9 /* iOSProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079372068DE7900F43EB9 /* iOSProjectUITests.m */; };
 		732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079552068E11E00F43EB9 /* MainTabBarController.m */; };
+		73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C792069D7A900179746 /* MainViewController.m */; };
+		73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C7C2069ED6000179746 /* MainLeftViewController.m */; };
+		73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */; };
 		E591E7066520094A173EE52C /* Pods_iOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AEA1ED68C628633D6DA988 /* Pods_iOSProjectUITests.framework */; };
 		F1F1489A7276D46E9189DA8D /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F9845E2A14974DD40739B /* Pods_iOSProject.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,12 @@
 		732079542068E11E00F43EB9 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		732079552068E11E00F43EB9 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		732079572068E16200F43EB9 /* PublicMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicMacro.h; sourceTree = "<group>"; };
+		73AA2C782069D7A900179746 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		73AA2C792069D7A900179746 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		73AA2C7B2069ED6000179746 /* MainLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftViewController.h; sourceTree = "<group>"; };
+		73AA2C7C2069ED6000179746 /* MainLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftViewController.m; sourceTree = "<group>"; };
+		73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWNavigationController.h; sourceTree = "<group>"; };
+		73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXWNavigationController.m; sourceTree = "<group>"; };
 		8C04CC64E146DFC6C8F2E7B8 /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A58123A1BF733D9ABB02DE62 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
 		AE809EA2E2E94572515931B0 /* Pods-iOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +188,7 @@
 		732079472068E00900F43EB9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				73AA2C772069D76500179746 /* 抽屉 */,
 				732079532068E0DA00F43EB9 /* Tabbar */,
 			);
 			path = Classes;
@@ -241,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				732079502068E00900F43EB9 /* Network */,
+				73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */,
+				73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -270,6 +282,17 @@
 				732079552068E11E00F43EB9 /* MainTabBarController.m */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		73AA2C772069D76500179746 /* 抽屉 */ = {
+			isa = PBXGroup;
+			children = (
+				73AA2C782069D7A900179746 /* MainViewController.h */,
+				73AA2C792069D7A900179746 /* MainViewController.m */,
+				73AA2C7B2069ED6000179746 /* MainLeftViewController.h */,
+				73AA2C7C2069ED6000179746 /* MainLeftViewController.m */,
+			);
+			path = "抽屉";
 			sourceTree = "<group>";
 		};
 		E8797DF314BCD355AA2E4709 /* Pods */ = {
@@ -583,8 +606,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				732079232068DE7900F43EB9 /* main.m in Sources */,
+				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
+				73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */,
 				732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */,
+				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
