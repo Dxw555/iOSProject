@@ -18,6 +18,10 @@
 		73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C792069D7A900179746 /* MainViewController.m */; };
 		73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C7C2069ED6000179746 /* MainLeftViewController.m */; };
 		73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */; };
+		73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */; };
+		73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BCA206B6E7700EE31C5 /* MeViewController.m */; };
+		73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD1206B6F3A00EE31C5 /* FindViewController.m */; };
+		73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD9206B8E3200EE31C5 /* BookViewController.m */; };
 		E591E7066520094A173EE52C /* Pods_iOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AEA1ED68C628633D6DA988 /* Pods_iOSProjectUITests.framework */; };
 		F1F1489A7276D46E9189DA8D /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F9845E2A14974DD40739B /* Pods_iOSProject.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +71,14 @@
 		73AA2C7C2069ED6000179746 /* MainLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftViewController.m; sourceTree = "<group>"; };
 		73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWNavigationController.h; sourceTree = "<group>"; };
 		73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXWNavigationController.m; sourceTree = "<group>"; };
+		73D06BC6206B6E4A00EE31C5 /* DXWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWViewController.h; sourceTree = "<group>"; };
+		73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXWViewController.m; sourceTree = "<group>"; };
+		73D06BC9206B6E7700EE31C5 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		73D06BCA206B6E7700EE31C5 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		73D06BD0206B6F3A00EE31C5 /* FindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		73D06BD1206B6F3A00EE31C5 /* FindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		73D06BD8206B8E3200EE31C5 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		73D06BD9206B8E3200EE31C5 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		8C04CC64E146DFC6C8F2E7B8 /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A58123A1BF733D9ABB02DE62 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
 		AE809EA2E2E94572515931B0 /* Pods-iOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +200,9 @@
 		732079472068E00900F43EB9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				73D06BD7206B8E2200EE31C5 /* 书架 */,
+				73D06BC5206B6E2100EE31C5 /* 发现 */,
+				73D06BC3206B6CC000EE31C5 /* 我 */,
 				73AA2C772069D76500179746 /* 抽屉 */,
 				732079532068E0DA00F43EB9 /* Tabbar */,
 			);
@@ -253,6 +268,8 @@
 				732079502068E00900F43EB9 /* Network */,
 				73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */,
 				73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */,
+				73D06BC6206B6E4A00EE31C5 /* DXWViewController.h */,
+				73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -293,6 +310,33 @@
 				73AA2C7C2069ED6000179746 /* MainLeftViewController.m */,
 			);
 			path = "抽屉";
+			sourceTree = "<group>";
+		};
+		73D06BC3206B6CC000EE31C5 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				73D06BC9206B6E7700EE31C5 /* MeViewController.h */,
+				73D06BCA206B6E7700EE31C5 /* MeViewController.m */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		73D06BC5206B6E2100EE31C5 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				73D06BD0206B6F3A00EE31C5 /* FindViewController.h */,
+				73D06BD1206B6F3A00EE31C5 /* FindViewController.m */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		73D06BD7206B8E2200EE31C5 /* 书架 */ = {
+			isa = PBXGroup;
+			children = (
+				73D06BD8206B8E3200EE31C5 /* BookViewController.h */,
+				73D06BD9206B8E3200EE31C5 /* BookViewController.m */,
+			);
+			path = "书架";
 			sourceTree = "<group>";
 		};
 		E8797DF314BCD355AA2E4709 /* Pods */ = {
@@ -607,9 +651,13 @@
 			files = (
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
+				73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
 				73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */,
+				73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */,
 				732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */,
+				73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */,
+				73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */,
 				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
