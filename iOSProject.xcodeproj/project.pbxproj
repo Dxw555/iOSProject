@@ -15,8 +15,10 @@
 		7320792D2068DE7900F43EB9 /* iOSProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7320792C2068DE7900F43EB9 /* iOSProjectTests.m */; };
 		732079382068DE7900F43EB9 /* iOSProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079372068DE7900F43EB9 /* iOSProjectUITests.m */; };
 		732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079552068E11E00F43EB9 /* MainTabBarController.m */; };
+		734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 734E569B206C884A00618D08 /* UIButton+LoadImage.m */; };
 		73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C792069D7A900179746 /* MainViewController.m */; };
 		73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C7C2069ED6000179746 /* MainLeftViewController.m */; };
+		73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */; };
 		73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */; };
 		73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */; };
 		73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BCA206B6E7700EE31C5 /* MeViewController.m */; };
@@ -65,10 +67,14 @@
 		732079542068E11E00F43EB9 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		732079552068E11E00F43EB9 /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		732079572068E16200F43EB9 /* PublicMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicMacro.h; sourceTree = "<group>"; };
+		734E569A206C884A00618D08 /* UIButton+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+LoadImage.h"; sourceTree = "<group>"; };
+		734E569B206C884A00618D08 /* UIButton+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LoadImage.m"; sourceTree = "<group>"; };
 		73AA2C782069D7A900179746 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		73AA2C792069D7A900179746 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		73AA2C7B2069ED6000179746 /* MainLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftViewController.h; sourceTree = "<group>"; };
 		73AA2C7C2069ED6000179746 /* MainLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftViewController.m; sourceTree = "<group>"; };
+		73C492B2206C78C0003FE21A /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
+		73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
 		73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWNavigationController.h; sourceTree = "<group>"; };
 		73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXWNavigationController.m; sourceTree = "<group>"; };
 		73D06BC6206B6E4A00EE31C5 /* DXWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWViewController.h; sourceTree = "<group>"; };
@@ -221,6 +227,10 @@
 		732079492068E00900F43EB9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				73C492B2206C78C0003FE21A /* UIImageView+LoadImage.h */,
+				73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */,
+				734E569A206C884A00618D08 /* UIButton+LoadImage.h */,
+				734E569B206C884A00618D08 /* UIButton+LoadImage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -651,6 +661,7 @@
 			files = (
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
+				73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */,
 				73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
 				73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */,
@@ -659,6 +670,7 @@
 				73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */,
 				73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */,
 				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,
+				734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
