@@ -24,6 +24,10 @@
     MainViewController *vc = [[MainViewController alloc] init];
     self.window.rootViewController = vc;
     
+    
+    
+    
+    
     return YES;
 }
 

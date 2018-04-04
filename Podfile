@@ -11,6 +11,7 @@ target 'iOSProject' do
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'FMDB'
+  pod 'ReactiveObjC'
 
   target 'iOSProjectTests' do
     inherit! :search_paths

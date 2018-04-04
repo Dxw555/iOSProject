@@ -24,6 +24,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    UIView *view = [[UIView alloc] initWithFrame:DXWAppWindow.bounds];
+    
+    [DXWAppWindow addSubview:view];
+    
+    
+    UIWindow *w = [[UIWindow alloc] initWithFrame:DXWAppWindow.bounds];
+//    w.windowLevel = UIWindowLevelAlert;
+    w.backgroundColor = DXWColorHexadecimalAndAlpha(0x000000, 0.3);
+    [w makeKeyAndVisible];
+    [DXWAppWindow addSubview:w];
+    
+}
+
 /*
 #pragma mark - Navigation
 
