@@ -7,6 +7,8 @@
 //
 
 #import "DXWNavigationController.h"
+#import "UIImage+Color.h"
+
 
 @interface DXWNavigationController ()
 
@@ -16,12 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.navigationBar.translucent = YES;
+    [self.navigationBar setBackgroundImage:[UIImage initWithColor:DXWColorRGB(200, 39, 39) imageSize:self.navigationBar.frame.size] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 @end

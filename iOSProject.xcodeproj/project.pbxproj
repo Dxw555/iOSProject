@@ -24,6 +24,10 @@
 		73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BCA206B6E7700EE31C5 /* MeViewController.m */; };
 		73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD1206B6F3A00EE31C5 /* FindViewController.m */; };
 		73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD9206B8E3200EE31C5 /* BookViewController.m */; };
+		73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */; };
+		73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00CB2079DED800F61099 /* BookTableViewController.m */; };
+		73FB00CF2079E15A00F61099 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00CE2079E15A00F61099 /* BookTableViewCell.m */; };
+		73FB00D22079ECFE00F61099 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00D12079ECFE00F61099 /* UIImage+Color.m */; };
 		E591E7066520094A173EE52C /* Pods_iOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AEA1ED68C628633D6DA988 /* Pods_iOSProjectUITests.framework */; };
 		F1F1489A7276D46E9189DA8D /* Pods_iOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F9845E2A14974DD40739B /* Pods_iOSProject.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +89,14 @@
 		73D06BD1206B6F3A00EE31C5 /* FindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		73D06BD8206B8E3200EE31C5 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		73D06BD9206B8E3200EE31C5 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		73DC4D74207A1CF80047F53A /* AppDelegate+VisibleNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+VisibleNVC.h"; sourceTree = "<group>"; };
+		73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+VisibleNVC.m"; sourceTree = "<group>"; };
+		73FB00CA2079DED800F61099 /* BookTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewController.h; sourceTree = "<group>"; };
+		73FB00CB2079DED800F61099 /* BookTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookTableViewController.m; sourceTree = "<group>"; };
+		73FB00CD2079E15A00F61099 /* BookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
+		73FB00CE2079E15A00F61099 /* BookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
+		73FB00D02079ECFE00F61099 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		73FB00D12079ECFE00F61099 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		8C04CC64E146DFC6C8F2E7B8 /* Pods-iOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectTests/Pods-iOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A58123A1BF733D9ABB02DE62 /* Pods-iOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.release.xcconfig"; sourceTree = "<group>"; };
 		AE809EA2E2E94572515931B0 /* Pods-iOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +204,8 @@
 			children = (
 				732079132068DE7900F43EB9 /* AppDelegate.h */,
 				732079142068DE7900F43EB9 /* AppDelegate.m */,
+				73DC4D74207A1CF80047F53A /* AppDelegate+VisibleNVC.h */,
+				73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -231,6 +245,8 @@
 				73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */,
 				734E569A206C884A00618D08 /* UIButton+LoadImage.h */,
 				734E569B206C884A00618D08 /* UIButton+LoadImage.m */,
+				73FB00D02079ECFE00F61099 /* UIImage+Color.h */,
+				73FB00D12079ECFE00F61099 /* UIImage+Color.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -345,6 +361,10 @@
 			children = (
 				73D06BD8206B8E3200EE31C5 /* BookViewController.h */,
 				73D06BD9206B8E3200EE31C5 /* BookViewController.m */,
+				73FB00CA2079DED800F61099 /* BookTableViewController.h */,
+				73FB00CB2079DED800F61099 /* BookTableViewController.m */,
+				73FB00CD2079E15A00F61099 /* BookTableViewCell.h */,
+				73FB00CE2079E15A00F61099 /* BookTableViewCell.m */,
 			);
 			path = "书架";
 			sourceTree = "<group>";
@@ -433,7 +453,7 @@
 		732079082068DE7900F43EB9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = dxw;
 				TargetAttributes = {
 					7320790F2068DE7900F43EB9 = {
@@ -661,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */,
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
 				73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */,
@@ -672,7 +693,10 @@
 				73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */,
 				73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */,
 				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,
+				73FB00D22079ECFE00F61099 /* UIImage+Color.m in Sources */,
+				73FB00CF2079E15A00F61099 /* BookTableViewCell.m in Sources */,
 				734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */,
+				73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +757,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -740,6 +765,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -788,6 +814,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -795,6 +822,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -833,6 +861,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProject/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxw.iOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -850,6 +879,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProject/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dxw.iOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
