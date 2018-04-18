@@ -25,6 +25,11 @@
 		73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD1206B6F3A00EE31C5 /* FindViewController.m */; };
 		73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD9206B8E3200EE31C5 /* BookViewController.m */; };
 		73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */; };
+		73F2237F2085993500946D69 /* EPUBReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2237E2085993500946D69 /* EPUBReadViewController.m */; };
+		73F2238220859C3D00946D69 /* EPUBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2238120859C3D00946D69 /* EPUBViewController.m */; };
+		73F223882085E22F00946D69 /* EPUBBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F223872085E22F00946D69 /* EPUBBackViewController.m */; };
+		73F2238B2085EDAD00946D69 /* EPUBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2238A2085EDAD00946D69 /* EPUBWebView.m */; };
+		73F2238E2085FD5000946D69 /* EPUBReadSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2238D2085FD5000946D69 /* EPUBReadSetting.m */; };
 		73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00CB2079DED800F61099 /* BookTableViewController.m */; };
 		73FB00CF2079E15A00F61099 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00CE2079E15A00F61099 /* BookTableViewCell.m */; };
 		73FB00D22079ECFE00F61099 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB00D12079ECFE00F61099 /* UIImage+Color.m */; };
@@ -91,6 +96,16 @@
 		73D06BD9206B8E3200EE31C5 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		73DC4D74207A1CF80047F53A /* AppDelegate+VisibleNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+VisibleNVC.h"; sourceTree = "<group>"; };
 		73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+VisibleNVC.m"; sourceTree = "<group>"; };
+		73F2237D2085993500946D69 /* EPUBReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBReadViewController.h; sourceTree = "<group>"; };
+		73F2237E2085993500946D69 /* EPUBReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBReadViewController.m; sourceTree = "<group>"; };
+		73F2238020859C3D00946D69 /* EPUBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBViewController.h; sourceTree = "<group>"; };
+		73F2238120859C3D00946D69 /* EPUBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBViewController.m; sourceTree = "<group>"; };
+		73F223862085E22F00946D69 /* EPUBBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBBackViewController.h; sourceTree = "<group>"; };
+		73F223872085E22F00946D69 /* EPUBBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBBackViewController.m; sourceTree = "<group>"; };
+		73F223892085EDAD00946D69 /* EPUBWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBWebView.h; sourceTree = "<group>"; };
+		73F2238A2085EDAD00946D69 /* EPUBWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBWebView.m; sourceTree = "<group>"; };
+		73F2238C2085FD5000946D69 /* EPUBReadSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBReadSetting.h; sourceTree = "<group>"; };
+		73F2238D2085FD5000946D69 /* EPUBReadSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBReadSetting.m; sourceTree = "<group>"; };
 		73FB00CA2079DED800F61099 /* BookTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewController.h; sourceTree = "<group>"; };
 		73FB00CB2079DED800F61099 /* BookTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookTableViewController.m; sourceTree = "<group>"; };
 		73FB00CD2079E15A00F61099 /* BookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
@@ -220,6 +235,7 @@
 		732079472068E00900F43EB9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				73F223792085988E00946D69 /* 电子书阅读器 */,
 				73D06BD7206B8E2200EE31C5 /* 书架 */,
 				73D06BC5206B6E2100EE31C5 /* 发现 */,
 				73D06BC3206B6CC000EE31C5 /* 我 */,
@@ -367,6 +383,47 @@
 				73FB00CE2079E15A00F61099 /* BookTableViewCell.m */,
 			);
 			path = "书架";
+			sourceTree = "<group>";
+		};
+		73F223792085988E00946D69 /* 电子书阅读器 */ = {
+			isa = PBXGroup;
+			children = (
+				73F2237A208598AF00946D69 /* Controller */,
+				73F2237B208598BC00946D69 /* View */,
+				73F2237C208598CE00946D69 /* Model */,
+			);
+			path = "电子书阅读器";
+			sourceTree = "<group>";
+		};
+		73F2237A208598AF00946D69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				73F2237D2085993500946D69 /* EPUBReadViewController.h */,
+				73F2237E2085993500946D69 /* EPUBReadViewController.m */,
+				73F2238020859C3D00946D69 /* EPUBViewController.h */,
+				73F2238120859C3D00946D69 /* EPUBViewController.m */,
+				73F223862085E22F00946D69 /* EPUBBackViewController.h */,
+				73F223872085E22F00946D69 /* EPUBBackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		73F2237B208598BC00946D69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73F223892085EDAD00946D69 /* EPUBWebView.h */,
+				73F2238A2085EDAD00946D69 /* EPUBWebView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		73F2237C208598CE00946D69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73F2238C2085FD5000946D69 /* EPUBReadSetting.h */,
+				73F2238D2085FD5000946D69 /* EPUBReadSetting.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E8797DF314BCD355AA2E4709 /* Pods */ = {
@@ -684,17 +741,22 @@
 				73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */,
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
+				73F2237F2085993500946D69 /* EPUBReadViewController.m in Sources */,
 				73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */,
 				73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */,
+				73F2238E2085FD5000946D69 /* EPUBReadSetting.m in Sources */,
+				73F223882085E22F00946D69 /* EPUBBackViewController.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
 				73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */,
 				73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */,
 				732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */,
 				73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */,
 				73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */,
+				73F2238220859C3D00946D69 /* EPUBViewController.m in Sources */,
 				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,
 				73FB00D22079ECFE00F61099 /* UIImage+Color.m in Sources */,
 				73FB00CF2079E15A00F61099 /* BookTableViewCell.m in Sources */,
+				73F2238B2085EDAD00946D69 /* EPUBWebView.m in Sources */,
 				734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */,
 				73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */,
 			);

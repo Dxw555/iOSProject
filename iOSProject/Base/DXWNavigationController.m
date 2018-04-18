@@ -19,8 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationBar.translucent = YES;
-    [self.navigationBar setBackgroundImage:[UIImage initWithColor:DXWColorRGB(200, 39, 39) imageSize:self.navigationBar.frame.size] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.translucent = NO;
+//    [self.navigationBar setBackgroundImage:[UIImage initWithColor:DXWColorRGB(200, 39, 39) imageSize:self.navigationBar.frame.size] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.barTintColor = DXWColorRGB(200, 39, 39);
     
 }
 

@@ -12,7 +12,7 @@
 #pragma mark - DEBUG模式下打印日志
 #ifdef DEBUG
 
-#define DLog(fmt,...) NSLog((@"%s[Line %d]" fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
+#define DLog(fmt,...) NSLog((@" %s [Line %d] " fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__);
 
 #else
 
@@ -126,6 +126,8 @@
 #define DXWColorGray [UIColor grayColor]
 //红色
 #define DXWColorRed [UIColor redColor]
+//随机颜色
+#define DXWColorRAND DXWColorRGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
 #pragma mark - 自定义颜色
 

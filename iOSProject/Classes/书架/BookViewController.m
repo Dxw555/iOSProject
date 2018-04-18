@@ -17,9 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.edgesForExtendedLayout = UIRectEdgeNone;  
     [self addChildViewController:self.bookTableController];
     [self.view addSubview:self.bookTableController.view];
-    
+    self.bookTableController.view.frame = CGRectMake(0, 0, DXWScreenWidth, DXWScreenHeight);
+    DLog(@"self.bookTableController.view = %@",self.bookTableController.view);
 }
 
 - (void)viewDidAppear:(BOOL)animated {

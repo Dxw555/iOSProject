@@ -31,9 +31,8 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
-    return image;
     
-    return nil;
+    return image;
 }
 
 /**

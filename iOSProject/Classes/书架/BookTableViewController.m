@@ -8,6 +8,8 @@
 
 #import "BookTableViewController.h"
 #import "BookTableViewCell.h"
+
+#import "EPUBReadViewController.h"
 @interface BookTableViewController ()
 
 @end
@@ -16,6 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else {
+        [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    }
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
@@ -43,6 +52,11 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    EPUBReadViewController *vc = [[EPUBReadViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
