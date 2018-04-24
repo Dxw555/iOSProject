@@ -18,6 +18,11 @@
 		734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 734E569B206C884A00618D08 /* UIButton+LoadImage.m */; };
 		73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C792069D7A900179746 /* MainViewController.m */; };
 		73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C7C2069ED6000179746 /* MainLeftViewController.m */; };
+		73B3C31E208ED53400B4AAA3 /* WKWebView+SearchWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C31D208ED53400B4AAA3 /* WKWebView+SearchWebView.m */; };
+		73B3C320208ED57700B4AAA3 /* SearchWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C31F208ED57700B4AAA3 /* SearchWebView.js */; };
+		73B3C323208ED97100B4AAA3 /* EPUBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C322208ED97100B4AAA3 /* EPUBParser.m */; };
+		73B3C325208EDC3A00B4AAA3 /* iOSApprentice.epub in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */; };
+		73B3C328208EDDDD00B4AAA3 /* EPUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C327208EDDDD00B4AAA3 /* EPUBModel.m */; };
 		73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */; };
 		73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */; };
 		73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */; };
@@ -25,6 +30,8 @@
 		73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD1206B6F3A00EE31C5 /* FindViewController.m */; };
 		73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BD9206B8E3200EE31C5 /* BookViewController.m */; };
 		73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */; };
+		73E423FF208DDF0500512A43 /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E423FE208DDF0500512A43 /* GSViewController.m */; };
+		73E42401208DDF3B00512A43 /* 3588.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 73E42400208DDF3A00512A43 /* 3588.PNG */; };
 		73F2237F2085993500946D69 /* EPUBReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2237E2085993500946D69 /* EPUBReadViewController.m */; };
 		73F2238220859C3D00946D69 /* EPUBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F2238120859C3D00946D69 /* EPUBViewController.m */; };
 		73F223882085E22F00946D69 /* EPUBBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F223872085E22F00946D69 /* EPUBBackViewController.m */; };
@@ -82,6 +89,14 @@
 		73AA2C792069D7A900179746 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		73AA2C7B2069ED6000179746 /* MainLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftViewController.h; sourceTree = "<group>"; };
 		73AA2C7C2069ED6000179746 /* MainLeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainLeftViewController.m; sourceTree = "<group>"; };
+		73B3C31C208ED53400B4AAA3 /* WKWebView+SearchWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SearchWebView.h"; sourceTree = "<group>"; };
+		73B3C31D208ED53400B4AAA3 /* WKWebView+SearchWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SearchWebView.m"; sourceTree = "<group>"; };
+		73B3C31F208ED57700B4AAA3 /* SearchWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SearchWebView.js; sourceTree = "<group>"; };
+		73B3C321208ED97100B4AAA3 /* EPUBParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBParser.h; sourceTree = "<group>"; };
+		73B3C322208ED97100B4AAA3 /* EPUBParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBParser.m; sourceTree = "<group>"; };
+		73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = iOSApprentice.epub; sourceTree = "<group>"; };
+		73B3C326208EDDDD00B4AAA3 /* EPUBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBModel.h; sourceTree = "<group>"; };
+		73B3C327208EDDDD00B4AAA3 /* EPUBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBModel.m; sourceTree = "<group>"; };
 		73C492B2206C78C0003FE21A /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
 		73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
 		73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWNavigationController.h; sourceTree = "<group>"; };
@@ -96,6 +111,9 @@
 		73D06BD9206B8E3200EE31C5 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		73DC4D74207A1CF80047F53A /* AppDelegate+VisibleNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+VisibleNVC.h"; sourceTree = "<group>"; };
 		73DC4D75207A1CF80047F53A /* AppDelegate+VisibleNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+VisibleNVC.m"; sourceTree = "<group>"; };
+		73E423FD208DDF0500512A43 /* GSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
+		73E423FE208DDF0500512A43 /* GSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSViewController.m; sourceTree = "<group>"; };
+		73E42400208DDF3A00512A43 /* 3588.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3588.PNG; sourceTree = "<group>"; };
 		73F2237D2085993500946D69 /* EPUBReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBReadViewController.h; sourceTree = "<group>"; };
 		73F2237E2085993500946D69 /* EPUBReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBReadViewController.m; sourceTree = "<group>"; };
 		73F2238020859C3D00946D69 /* EPUBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBViewController.h; sourceTree = "<group>"; };
@@ -160,6 +178,8 @@
 		732079072068DE7900F43EB9 = {
 			isa = PBXGroup;
 			children = (
+				73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */,
+				73E42400208DDF3A00512A43 /* 3588.PNG */,
 				732079122068DE7900F43EB9 /* iOSProject */,
 				7320792B2068DE7900F43EB9 /* iOSProjectTests */,
 				732079362068DE7900F43EB9 /* iOSProjectUITests */,
@@ -354,6 +374,15 @@
 			path = "抽屉";
 			sourceTree = "<group>";
 		};
+		73B3C31B208ED50100B4AAA3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				73B3C31C208ED53400B4AAA3 /* WKWebView+SearchWebView.h */,
+				73B3C31D208ED53400B4AAA3 /* WKWebView+SearchWebView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		73D06BC3206B6CC000EE31C5 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +397,7 @@
 			children = (
 				73D06BD0206B6F3A00EE31C5 /* FindViewController.h */,
 				73D06BD1206B6F3A00EE31C5 /* FindViewController.m */,
+				73E423FC208DDEE800512A43 /* 模糊 */,
 			);
 			path = "发现";
 			sourceTree = "<group>";
@@ -385,9 +415,20 @@
 			path = "书架";
 			sourceTree = "<group>";
 		};
+		73E423FC208DDEE800512A43 /* 模糊 */ = {
+			isa = PBXGroup;
+			children = (
+				73E423FD208DDF0500512A43 /* GSViewController.h */,
+				73E423FE208DDF0500512A43 /* GSViewController.m */,
+			);
+			path = "模糊";
+			sourceTree = "<group>";
+		};
 		73F223792085988E00946D69 /* 电子书阅读器 */ = {
 			isa = PBXGroup;
 			children = (
+				73B3C31F208ED57700B4AAA3 /* SearchWebView.js */,
+				73B3C31B208ED50100B4AAA3 /* Category */,
 				73F2237A208598AF00946D69 /* Controller */,
 				73F2237B208598BC00946D69 /* View */,
 				73F2237C208598CE00946D69 /* Model */,
@@ -422,6 +463,10 @@
 			children = (
 				73F2238C2085FD5000946D69 /* EPUBReadSetting.h */,
 				73F2238D2085FD5000946D69 /* EPUBReadSetting.m */,
+				73B3C321208ED97100B4AAA3 /* EPUBParser.h */,
+				73B3C322208ED97100B4AAA3 /* EPUBParser.m */,
+				73B3C326208EDDDD00B4AAA3 /* EPUBModel.h */,
+				73B3C327208EDDDD00B4AAA3 /* EPUBModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -556,6 +601,9 @@
 			files = (
 				732079202068DE7900F43EB9 /* LaunchScreen.storyboard in Resources */,
 				7320791D2068DE7900F43EB9 /* Assets.xcassets in Resources */,
+				73B3C320208ED57700B4AAA3 /* SearchWebView.js in Resources */,
+				73E42401208DDF3B00512A43 /* 3588.PNG in Resources */,
+				73B3C325208EDC3A00B4AAA3 /* iOSApprentice.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,17 +681,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOSProject/Pods-iOSProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/GDataXML-HTML/GDataXML_HTML.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ZipArchive/ZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDataXML_HTML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -740,17 +794,21 @@
 			files = (
 				73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */,
 				732079232068DE7900F43EB9 /* main.m in Sources */,
+				73E423FF208DDF0500512A43 /* GSViewController.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
 				73F2237F2085993500946D69 /* EPUBReadViewController.m in Sources */,
 				73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */,
 				73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */,
 				73F2238E2085FD5000946D69 /* EPUBReadSetting.m in Sources */,
+				73B3C323208ED97100B4AAA3 /* EPUBParser.m in Sources */,
 				73F223882085E22F00946D69 /* EPUBBackViewController.m in Sources */,
 				732079152068DE7900F43EB9 /* AppDelegate.m in Sources */,
 				73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */,
+				73B3C31E208ED53400B4AAA3 /* WKWebView+SearchWebView.m in Sources */,
 				73D06BDA206B8E3200EE31C5 /* BookViewController.m in Sources */,
 				732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */,
 				73D06BD2206B6F3A00EE31C5 /* FindViewController.m in Sources */,
+				73B3C328208EDDDD00B4AAA3 /* EPUBModel.m in Sources */,
 				73D06BCB206B6E7700EE31C5 /* MeViewController.m in Sources */,
 				73F2238220859C3D00946D69 /* EPUBViewController.m in Sources */,
 				73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */,

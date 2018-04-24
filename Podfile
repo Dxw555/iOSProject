@@ -12,6 +12,9 @@ target 'iOSProject' do
   pod 'SDWebImage'
   pod 'FMDB'
   pod 'ReactiveObjC'
+  pod 'ZipArchive'
+  pod 'GDataXML-HTML'
+  pod 'MBProgressHUD'
 
   target 'iOSProjectTests' do
     inherit! :search_paths

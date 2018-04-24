@@ -7,7 +7,7 @@
 //
 
 #import "FindViewController.h"
-
+#import "GSViewController.h"
 @interface FindViewController ()<UITableViewDataSource, UITableViewDelegate>
 /** tableview */
 @property (nonatomic , strong) UITableView *tableview ;
@@ -45,6 +45,8 @@
     }else{
         self.tabBarController.tabBar.hidden = YES;
     }
+    GSViewController *vc = [[GSViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - ljz

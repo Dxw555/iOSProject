@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "EPUBModel.h"
+
 @interface EPUBReadViewController : UIViewController
 
 @end
