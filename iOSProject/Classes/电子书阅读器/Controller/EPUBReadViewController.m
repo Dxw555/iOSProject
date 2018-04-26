@@ -12,13 +12,9 @@
 
 @interface EPUBReadViewController ()<UIPageViewControllerDelegate,UIPageViewControllerDataSource>
 
-/** pageview */
 @property (nonatomic , strong) UIPageViewController *pageViewController;
-
-/** controllers */
-@property (nonatomic , strong) NSMutableArray *dataArray;
-
-/** 动画中 */
+@property (nonatomic , strong) EPUBViewController *beforeController;
+@property (nonatomic , strong) EPUBViewController *afterController;
 @property (nonatomic , assign) BOOL pageIsAnimating;
 
 @end
@@ -47,7 +43,9 @@
             backViewController.currentViewController = (EPUBViewController *)viewController;
             return backViewController;
         }else {
-            EPUBViewController *nextController = [self afterViewController];
+            EPUBBackViewController *backViewController = (EPUBBackViewController *)viewController;
+            self.beforeController = backViewController.currentViewController;
+            EPUBViewController *nextController = [self afterEPUBViewControllerWith:backViewController.currentViewController];
             return nextController;
         }
     }else {
@@ -63,19 +61,20 @@
     }
     if (pageViewController.transitionStyle == UIPageViewControllerTransitionStylePageCurl) {
         if ([viewController isKindOfClass:[EPUBViewController class]]) {
-            
-            EPUBViewController *nextController = [self beforeViewController];
-            if (!nextController) {
+            if ((EPUBViewController *)viewController == self.beforeController) {
                 return nil;
             }
+            self.afterController = (EPUBViewController *)viewController;
+            
             //创建背面显示控制器
             EPUBBackViewController *backViewController = [EPUBBackViewController new];
-            backViewController.currentViewController = nextController;
+            backViewController.currentViewController = self.beforeController;
             return backViewController;
         }else {
             EPUBBackViewController *backViewController = (EPUBBackViewController *)viewController;
             //获取上一页显示控制器
             EPUBViewController *childViewController = backViewController.currentViewController;
+            self.beforeController = [self beforeEPUBViewControllerWith:self.beforeController];
             return childViewController;
         }
     }else {
@@ -88,59 +87,14 @@
 }
 // 滑动结束时的回调
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
-    if (finished || completed) {
-        self.pageIsAnimating = NO;
-        EPUBViewController *controller = (EPUBViewController *)[pageViewController.viewControllers firstObject];
-        EPUBViewController *nowController = [self.dataArray objectAtIndex:1];
-        EPUBViewController *afterController = [self.dataArray objectAtIndex:2];
-        if (nowController != controller) {
-            if (controller == afterController) {
-                [self afterViewController];
-            }else {
-                [self beforeViewController];
-            }
-        }
+    self.pageIsAnimating = NO;
+    EPUBViewController *controller = (EPUBViewController *)[pageViewController.viewControllers firstObject];
+    if (controller == self.beforeController || controller == self.afterController) {
+        self.beforeController = [self beforeEPUBViewControllerWith:controller];
     }
-   
 }
 
-- (void)refreshController {
-    [self.dataArray removeAllObjects];
-}
-
-/**
- 获取后面显示控制器,如果前面没有,返回nil
- @return 后面显示控制器
- */
-- (EPUBViewController *)afterViewController {
-    EPUBViewController *nowController = [self.dataArray objectAtIndex:1];
-    EPUBViewController *nextController = [self.dataArray objectAtIndex:2];
-    if (nowController == nextController) {
-        return nil;
-    }
-    EPUBViewController *nextNextController = [self afterEPUBViewControllerWith:nextController];
-    [self.dataArray addObject:nextNextController];
-    [self.dataArray removeObjectAtIndex:0];
-    DLog(@"self.dataArray %@",self.dataArray);
-    return nextController;
-}
-
-/**
- 获取前面显示控制器,如果前面没有,返回nil
- @return 前面显示控制器
- */
-- (EPUBViewController *)beforeViewController {
-    EPUBViewController *nowController = [self.dataArray objectAtIndex:1];
-    EPUBViewController *nextController = [self.dataArray objectAtIndex:0];
-    if (nowController == nextController) {
-        return nil;
-    }
-    EPUBViewController *nextNextController = [self beforeEPUBViewControllerWith:nextController];
-    [self.dataArray insertObject:nextNextController atIndex:0];
-    [self.dataArray removeLastObject];
-    return nextController;
-}
-
+#pragma mark - 显示controller
 /**
  根据当前显示,创建新的控制器
 
@@ -178,7 +132,7 @@
     }
     if (currentPageRefIndex < 0) {
         //前面没有了
-        return controller;
+        return nil;
     }
     
     EPUBViewController *childViewController = [[EPUBViewController alloc] initWithPagrRefIndex:currentPageRefIndex
@@ -208,7 +162,7 @@
     }
     if (currentPageRefIndex >= epub.epubPageRefs.count) {
         //后面没有了
-        return controller;
+        return nil;
     }
     
     EPUBViewController *childViewController = [[EPUBViewController alloc] initWithPagrRefIndex:currentPageRefIndex
@@ -225,10 +179,7 @@
         
         EPUBViewController *childViewController = [self currentViewController];
         
-        [self.dataArray addObject:childViewController];
-        [self.dataArray addObject:childViewController];
-        [self.dataArray addObject:[self afterEPUBViewControllerWith:childViewController]];
-        
+        self.beforeController = childViewController;
      
         NSDictionary *opinions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:UIPageViewControllerSpineLocationMin]
                                                              forKey:UIPageViewControllerOptionSpineLocationKey];
@@ -248,13 +199,6 @@
         
     }
     return _pageViewController;
-}
-
-- (NSMutableArray *)dataArray {
-    if (!_dataArray) {
-        _dataArray = [[NSMutableArray alloc] init];
-    }
-    return _dataArray;
 }
 
 @end
