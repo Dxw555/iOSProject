@@ -55,7 +55,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *fileFullPath=[[NSBundle mainBundle] pathForResource:@"iOSApprentice" ofType:@"epub" inDirectory:nil];
+    fileFullPath=[[NSBundle mainBundle] pathForResource:@"abc" ofType:@"epub" inDirectory:nil];
+    
+    
+    EPUBModel *model = [[EPUBModel alloc] init];
+    [model EPUBModle:fileFullPath];
+    
     EPUBReadViewController *vc = [[EPUBReadViewController alloc] init];
+    vc.epub = model;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "EPUBModel.h"
 
 @interface EPUBReadViewController : UIViewController
+
+/** epubModel */
+@property (nonatomic , strong) EPUBModel *epub;
 
 @end

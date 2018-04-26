@@ -9,25 +9,28 @@
 #import "EPUBBackViewController.h"
 
 @interface EPUBBackViewController ()
-@property (nonatomic, strong) UIImage *backgroundImage;
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation EPUBBackViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [imageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-    [imageView setImage:_backgroundImage];
-    [imageView setAlpha:0.9];
-    [self.view addSubview:imageView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.imageView.image = [self captureView:_currentViewController.view];
+    [self.view addSubview:self.imageView];
 }
 
-- (void)updateWithViewController:(EPUBViewController *)viewController {
-    self.backgroundImage = [self captureView:viewController.view];
-    self.currentViewController = viewController;
+- (void)setCurrentViewController:(EPUBViewController *)currentViewController {
+    DXWWeakSelf(self);
+    _currentViewController = currentViewController;
+    DXWWeakSelf(_currentViewController);
+    _currentViewController.showFinish = ^{
+        weakself.imageView.image = [weakself captureView:weak_currentViewController.view];
+    };
 }
 
+//创建快照
 - (UIImage *)captureView:(UIView *)view {
     CGSize size = view.bounds.size;
     CGAffineTransform transform = CGAffineTransformMake(-1,0,0,1,size.width,0);
@@ -38,6 +41,16 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
+}
+
+#pragma ljz
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        [_imageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+        _imageView.alpha = 0.8;
+    }
+    return _imageView;
 }
 
 @end

@@ -16,6 +16,7 @@
 		732079382068DE7900F43EB9 /* iOSProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079372068DE7900F43EB9 /* iOSProjectUITests.m */; };
 		732079562068E11E00F43EB9 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732079552068E11E00F43EB9 /* MainTabBarController.m */; };
 		734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 734E569B206C884A00618D08 /* UIButton+LoadImage.m */; };
+		73A94C0420907D6C00788811 /* UIPageViewController+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A94C0320907D6C00788811 /* UIPageViewController+Gesture.m */; };
 		73AA2C7A2069D7A900179746 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C792069D7A900179746 /* MainViewController.m */; };
 		73AA2C7D2069ED6000179746 /* MainLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AA2C7C2069ED6000179746 /* MainLeftViewController.m */; };
 		73B3C31E208ED53400B4AAA3 /* WKWebView+SearchWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C31D208ED53400B4AAA3 /* WKWebView+SearchWebView.m */; };
@@ -23,6 +24,10 @@
 		73B3C323208ED97100B4AAA3 /* EPUBParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C322208ED97100B4AAA3 /* EPUBParser.m */; };
 		73B3C325208EDC3A00B4AAA3 /* iOSApprentice.epub in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */; };
 		73B3C328208EDDDD00B4AAA3 /* EPUBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C327208EDDDD00B4AAA3 /* EPUBModel.m */; };
+		73B3C32B208F081800B4AAA3 /* NSFileManager+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C32A208F081800B4AAA3 /* NSFileManager+Manager.m */; };
+		73B3C32D208F0FD000B4AAA3 /* epubtheme.xml in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C32C208F0FD000B4AAA3 /* epubtheme.xml */; };
+		73B3C330208F0FD600B4AAA3 /* DFPShaoNvW5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C32F208F0FD600B4AAA3 /* DFPShaoNvW5.ttf */; };
+		73B3C332208F2A7400B4AAA3 /* abc.epub in Resources */ = {isa = PBXBuildFile; fileRef = 73B3C331208F2A7300B4AAA3 /* abc.epub */; };
 		73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */; };
 		73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC1206B5B7500EE31C5 /* DXWNavigationController.m */; };
 		73D06BC8206B6E4A00EE31C5 /* DXWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D06BC7206B6E4A00EE31C5 /* DXWViewController.m */; };
@@ -85,6 +90,8 @@
 		732079572068E16200F43EB9 /* PublicMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicMacro.h; sourceTree = "<group>"; };
 		734E569A206C884A00618D08 /* UIButton+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+LoadImage.h"; sourceTree = "<group>"; };
 		734E569B206C884A00618D08 /* UIButton+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LoadImage.m"; sourceTree = "<group>"; };
+		73A94C0220907D6C00788811 /* UIPageViewController+Gesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+Gesture.h"; sourceTree = "<group>"; };
+		73A94C0320907D6C00788811 /* UIPageViewController+Gesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+Gesture.m"; sourceTree = "<group>"; };
 		73AA2C782069D7A900179746 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		73AA2C792069D7A900179746 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		73AA2C7B2069ED6000179746 /* MainLeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainLeftViewController.h; sourceTree = "<group>"; };
@@ -97,6 +104,11 @@
 		73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = iOSApprentice.epub; sourceTree = "<group>"; };
 		73B3C326208EDDDD00B4AAA3 /* EPUBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPUBModel.h; sourceTree = "<group>"; };
 		73B3C327208EDDDD00B4AAA3 /* EPUBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPUBModel.m; sourceTree = "<group>"; };
+		73B3C329208F081800B4AAA3 /* NSFileManager+Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Manager.h"; sourceTree = "<group>"; };
+		73B3C32A208F081800B4AAA3 /* NSFileManager+Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Manager.m"; sourceTree = "<group>"; };
+		73B3C32C208F0FD000B4AAA3 /* epubtheme.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = epubtheme.xml; sourceTree = "<group>"; };
+		73B3C32F208F0FD600B4AAA3 /* DFPShaoNvW5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DFPShaoNvW5.ttf; sourceTree = "<group>"; };
+		73B3C331208F2A7300B4AAA3 /* abc.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.epub; sourceTree = "<group>"; };
 		73C492B2206C78C0003FE21A /* UIImageView+LoadImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LoadImage.h"; sourceTree = "<group>"; };
 		73C492B3206C78C0003FE21A /* UIImageView+LoadImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LoadImage.m"; sourceTree = "<group>"; };
 		73D06BC0206B5B7500EE31C5 /* DXWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXWNavigationController.h; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 		732079072068DE7900F43EB9 = {
 			isa = PBXGroup;
 			children = (
+				73B3C331208F2A7300B4AAA3 /* abc.epub */,
 				73B3C324208EDC3A00B4AAA3 /* iOSApprentice.epub */,
 				73E42400208DDF3A00512A43 /* 3588.PNG */,
 				732079122068DE7900F43EB9 /* iOSProject */,
@@ -283,6 +296,8 @@
 				734E569B206C884A00618D08 /* UIButton+LoadImage.m */,
 				73FB00D02079ECFE00F61099 /* UIImage+Color.h */,
 				73FB00D12079ECFE00F61099 /* UIImage+Color.m */,
+				73B3C329208F081800B4AAA3 /* NSFileManager+Manager.h */,
+				73B3C32A208F081800B4AAA3 /* NSFileManager+Manager.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -379,8 +394,18 @@
 			children = (
 				73B3C31C208ED53400B4AAA3 /* WKWebView+SearchWebView.h */,
 				73B3C31D208ED53400B4AAA3 /* WKWebView+SearchWebView.m */,
+				73A94C0220907D6C00788811 /* UIPageViewController+Gesture.h */,
+				73A94C0320907D6C00788811 /* UIPageViewController+Gesture.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		73B3C32E208F0FD600B4AAA3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				73B3C32F208F0FD600B4AAA3 /* DFPShaoNvW5.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		73D06BC3206B6CC000EE31C5 /* 我 */ = {
@@ -427,7 +452,9 @@
 		73F223792085988E00946D69 /* 电子书阅读器 */ = {
 			isa = PBXGroup;
 			children = (
+				73B3C32C208F0FD000B4AAA3 /* epubtheme.xml */,
 				73B3C31F208ED57700B4AAA3 /* SearchWebView.js */,
+				73B3C32E208F0FD600B4AAA3 /* fonts */,
 				73B3C31B208ED50100B4AAA3 /* Category */,
 				73F2237A208598AF00946D69 /* Controller */,
 				73F2237B208598BC00946D69 /* View */,
@@ -599,11 +626,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B3C332208F2A7400B4AAA3 /* abc.epub in Resources */,
+				73B3C330208F0FD600B4AAA3 /* DFPShaoNvW5.ttf in Resources */,
 				732079202068DE7900F43EB9 /* LaunchScreen.storyboard in Resources */,
 				7320791D2068DE7900F43EB9 /* Assets.xcassets in Resources */,
 				73B3C320208ED57700B4AAA3 /* SearchWebView.js in Resources */,
 				73E42401208DDF3B00512A43 /* 3588.PNG in Resources */,
 				73B3C325208EDC3A00B4AAA3 /* iOSApprentice.epub in Resources */,
+				73B3C32D208F0FD000B4AAA3 /* epubtheme.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +825,7 @@
 				73FB00CC2079DED800F61099 /* BookTableViewController.m in Sources */,
 				732079232068DE7900F43EB9 /* main.m in Sources */,
 				73E423FF208DDF0500512A43 /* GSViewController.m in Sources */,
+				73A94C0420907D6C00788811 /* UIPageViewController+Gesture.m in Sources */,
 				73D06BC2206B5B7500EE31C5 /* DXWNavigationController.m in Sources */,
 				73F2237F2085993500946D69 /* EPUBReadViewController.m in Sources */,
 				73C492B4206C78C0003FE21A /* UIImageView+LoadImage.m in Sources */,
@@ -816,6 +847,7 @@
 				73FB00CF2079E15A00F61099 /* BookTableViewCell.m in Sources */,
 				73F2238B2085EDAD00946D69 /* EPUBWebView.m in Sources */,
 				734E569C206C884A00618D08 /* UIButton+LoadImage.m in Sources */,
+				73B3C32B208F081800B4AAA3 /* NSFileManager+Manager.m in Sources */,
 				73DC4D76207A1CF80047F53A /* AppDelegate+VisibleNVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

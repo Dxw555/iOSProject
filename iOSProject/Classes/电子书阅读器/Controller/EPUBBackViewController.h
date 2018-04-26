@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "EPUBViewController.h"
 @interface EPUBBackViewController : UIViewController
-@property (assign, nonatomic) EPUBViewController *currentViewController;
-- (void)updateWithViewController:(EPUBViewController *)viewController ;
+@property (strong, nonatomic) EPUBViewController *currentViewController;
+//- (void)updateWithViewController:(EPUBViewController *)viewController ;
 @end

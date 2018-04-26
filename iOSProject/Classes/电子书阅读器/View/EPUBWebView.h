@@ -6,8 +6,7 @@
 //  Copyright © 2018年 dxw. All rights reserved.
 //
 
-#import <WebKit/WebKit.h>
 
-@interface EPUBWebView : WKWebView
+@interface EPUBWebView : UIWebView
 
 @end

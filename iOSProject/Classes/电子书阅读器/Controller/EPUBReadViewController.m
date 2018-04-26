@@ -30,32 +30,36 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.pageViewController.view];
     [self addChildViewController:self.pageViewController];
+    
 }
 
 #pragma mark - UIPageViewControllerDelegate
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    DLog(@"pageViewController %@",pageViewController.viewControllers);
     if (self.pageAnimationFinished) {
         if (pageViewController.transitionStyle == UIPageViewControllerTransitionStylePageCurl) {
             //仿真翻页
             if ([viewController isKindOfClass:[EPUBViewController class]]) {
                 //创建背面显示控制器
                 EPUBBackViewController *backViewController = [EPUBBackViewController new];
-                [backViewController updateWithViewController:(id)viewController];
+                backViewController.currentViewController = (EPUBViewController *)viewController;
                 return backViewController;
             }else {
+
                 EPUBBackViewController *backViewController = (EPUBBackViewController *)viewController;
-                NSInteger index = backViewController.currentViewController.index + 1;
+                EPUBViewController *controller = backViewController.currentViewController;
+
                 //获取下一页显示控制器
-                EPUBViewController *childViewController = [self viewControllerAtIndex:index];
+                EPUBViewController *childViewController = [self nextEPUBViewControllerWith:controller];
+                DLog(@"childViewController %@",childViewController);
                 return childViewController;
             }
         }else {
-            EPUBViewController *controller = (EPUBViewController *)viewController;
-            NSInteger index = controller.index + 1;
-            
             //平滑翻页
-            EPUBViewController *childViewController = [self viewControllerAtIndex:index];
+            EPUBViewController *controller = (EPUBViewController *)viewController;
+            EPUBViewController *childViewController = [self nextEPUBViewControllerWith:controller];
+            
             return childViewController;
         }
     }
@@ -66,14 +70,14 @@
     if (self.pageAnimationFinished) {
         if (pageViewController.transitionStyle == UIPageViewControllerTransitionStylePageCurl) {
             if ([viewController isKindOfClass:[EPUBViewController class]]) {
-                EPUBViewController *childViewController = (EPUBViewController *)viewController;
-                NSInteger index = childViewController.index - 1;
-                if (index < 0) {
+
+                EPUBViewController *childViewController = [self onEPUBViewControllerWith:(EPUBViewController *)viewController];
+                if (!childViewController) {
                     return nil;
                 }
                 //创建背面显示控制器
                 EPUBBackViewController *backViewController = [EPUBBackViewController new];
-                [backViewController updateWithViewController:[self viewControllerAtIndex:index]];
+                backViewController.currentViewController = childViewController;
                 return backViewController;
             }else {
                 EPUBBackViewController *backViewController = (EPUBBackViewController *)viewController;
@@ -82,13 +86,7 @@
                 return childViewController;
             }
         }else {
-            EPUBViewController *controller = (EPUBViewController *)viewController;
-            NSInteger index = controller.index - 1;
-            if (index < 0) {
-                return nil;
-            }
-            
-            EPUBViewController *childViewController = [self viewControllerAtIndex:index];
+            EPUBViewController *childViewController = [self onEPUBViewControllerWith:(EPUBViewController *)viewController];
             return childViewController;
         }
     }
@@ -105,10 +103,66 @@
 }
 
 //page显示控制器
-- (EPUBViewController *)viewControllerAtIndex:(NSUInteger)index {
-    DLog(@"index = %ld",(long)index);
+- (EPUBViewController *)contentViewController{
     EPUBViewController *childViewController = [[EPUBViewController alloc] init];
-    childViewController.index = index;
+    childViewController.epub = self.epub;
+    childViewController.currentPageRefIndex = self.epub.epubSetting.currentPageRefIndex;
+    childViewController.currentOffYIndexInPage = self.epub.epubSetting.currentOffYIndexInPage;
+    return childViewController;
+}
+
+- (EPUBViewController *)onEPUBViewControllerWith:(EPUBViewController *)controller {
+    EPUBModel *epub = controller.epub;
+    
+    NSInteger currentPageRefIndex = controller.currentPageRefIndex;
+    NSInteger currentOffYIndexInPage = controller.currentOffYIndexInPage;
+    NSMutableDictionary *dictPageWithOffYCount = epub.epubSetting.dictPageWithOffYCount;
+    NSInteger currentPageCount = [[dictPageWithOffYCount objectForKey:[NSString stringWithFormat:@"%@",@(currentPageRefIndex)]] integerValue];
+    if (currentPageCount < 1) {
+        currentPageCount = 1;
+    }
+    currentOffYIndexInPage = currentOffYIndexInPage - 1;
+    if (currentOffYIndexInPage < 0) {
+        currentPageRefIndex = currentPageRefIndex - 1;
+    }
+    if (currentPageRefIndex < 0) {
+        return nil;
+    }
+    
+    EPUBViewController *childViewController = [[EPUBViewController alloc] init];
+    childViewController.epub = self.epub;
+    if (controller.currentPageRefIndex == currentPageRefIndex + 1) {
+        //向上翻一页
+        childViewController.isPrePage = YES;
+    }
+    childViewController.currentPageRefIndex = currentPageRefIndex;
+    childViewController.currentOffYIndexInPage = currentOffYIndexInPage;
+    return childViewController;
+}
+
+- (EPUBViewController *)nextEPUBViewControllerWith:(EPUBViewController *)controller {
+    EPUBModel *epub = controller.epub;
+    
+    NSInteger currentPageRefIndex = controller.currentPageRefIndex;
+    NSInteger currentOffYIndexInPage = controller.currentOffYIndexInPage;
+    NSMutableDictionary *dictPageWithOffYCount = epub.epubSetting.dictPageWithOffYCount;
+    NSInteger currentPageCount = [[dictPageWithOffYCount objectForKey:[NSString stringWithFormat:@"%@",@(currentPageRefIndex)]] integerValue];
+    if (currentPageCount < 1) {
+        currentPageCount = 1;
+    }
+    currentOffYIndexInPage = currentOffYIndexInPage + 1;
+    if (currentOffYIndexInPage >= currentPageCount) {
+        currentPageRefIndex = currentPageRefIndex + 1;
+        currentOffYIndexInPage = 0;
+    }
+    if (currentPageRefIndex >= epub.epubPageRefs.count) {
+        return nil;
+    }
+    
+    EPUBViewController *childViewController = [[EPUBViewController alloc] init];
+    childViewController.epub = self.epub;
+    childViewController.currentPageRefIndex = currentPageRefIndex;
+    childViewController.currentOffYIndexInPage = currentOffYIndexInPage;
     return childViewController;
 }
 
@@ -116,8 +170,8 @@
 - (UIPageViewController *)pageViewController {
     if (!_pageViewController) {
         
-        EPUBViewController *childViewController = [self viewControllerAtIndex:0];
-        
+        EPUBViewController *childViewController = [self contentViewController];
+     
         NSDictionary *opinions = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:UIPageViewControllerSpineLocationMin]
                                                              forKey:UIPageViewControllerOptionSpineLocationKey];
         
@@ -130,9 +184,10 @@
         
         [_pageViewController setViewControllers:@[childViewController]
                                       direction:UIPageViewControllerNavigationDirectionForward
-                                       animated:NO
+                                       animated:YES
                                      completion:nil];
         [_pageViewController didMoveToParentViewController:self];
+        
     }
     return _pageViewController;
 }

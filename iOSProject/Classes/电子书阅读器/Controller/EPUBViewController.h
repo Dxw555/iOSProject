@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPUBModel.h"
 
 @interface EPUBViewController : UIViewController
 
-/** index */
-@property (nonatomic , assign) NSInteger index;
+@property (nonatomic, copy) void(^showFinish)();
+
+/** epubModel */
+@property (nonatomic , strong) EPUBModel *epub;
+
+@property (nonatomic, assign) NSInteger currentPageRefIndex;        //当前页码索引
+@property (nonatomic, assign) NSInteger currentOffYIndexInPage;     //页码内 滚动索引
+@property (nonatomic, assign) BOOL isPrePage; //翻上一页
 
 @end
