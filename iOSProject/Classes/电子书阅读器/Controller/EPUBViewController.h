@@ -20,4 +20,6 @@
 @property (nonatomic, assign) NSInteger currentOffYIndexInPage;     //页码内 滚动索引
 @property (nonatomic, assign) BOOL isPrePage; //翻上一页
 
+- (instancetype)initWithPagrRefIndex:(NSInteger)pageRefIndex offYIndexInPage:(NSInteger)offYIndexInPage isPrePage:(BOOL)isPrePage epub:(EPUBModel *)epub ;
+
 @end

@@ -10,5 +10,4 @@
 #import "EPUBViewController.h"
 @interface EPUBBackViewController : UIViewController
 @property (strong, nonatomic) EPUBViewController *currentViewController;
-//- (void)updateWithViewController:(EPUBViewController *)viewController ;
 @end

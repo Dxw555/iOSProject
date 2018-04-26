@@ -18,27 +18,29 @@
 
 @implementation EPUBViewController
 
-- (void)dealloc {
-    
+
+- (instancetype)initWithPagrRefIndex:(NSInteger)pageRefIndex offYIndexInPage:(NSInteger)offYIndexInPage isPrePage:(BOOL)isPrePage epub:(EPUBModel *)epub {
+    self = [super init];
+    if (self) {
+        self.epub = epub;
+        self.currentPageRefIndex = pageRefIndex;
+        self.currentOffYIndexInPage = offYIndexInPage;
+        self.isPrePage = isPrePage;
+        
+        self.view.backgroundColor = DXWColorHex(0x0dad51);
+        [self.view addSubview:self.webView];
+        
+        NSString *jsContent = [self.epub jsContentWithViewRect:self.webView.frame];
+        NSString *pageURL=[self.epub pageURLWithPageRefIndex:self.currentPageRefIndex];
+        NSString *htmlContent= [self.epub htmlContentFromFile:pageURL AddJsContent:jsContent];
+        [self.webView loadHTMLString:htmlContent baseURL:[NSURL fileURLWithPath:pageURL]];
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = DXWColorHex(0x0dad51);
-    [self.view addSubview:self.webView];
-    
-    NSString *jsContent = [self.epub jsContentWithViewRect:self.webView.frame];
-    NSString *pageURL=[self.epub pageURLWithPageRefIndex:self.currentPageRefIndex];
-    NSString *htmlContent= [self.epub htmlContentFromFile:pageURL AddJsContent:jsContent];
-    //DLog(@"htmlContent = %@",htmlContent);
-    
-    
-    
-    [self.webView loadHTMLString:htmlContent baseURL:[NSURL fileURLWithPath:pageURL]];
-    
-    
 }
-
 #pragma mark - uiwe
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -52,18 +54,10 @@
         self.currentOffYIndexInPage = currentOffCountInPage - 1;
     }
     [self gotoOffYInPageWithOffYIndex:self.currentOffYIndexInPage WithOffCountInPage:offCountInPage];
-    
 }
 
-
-
--(int)gotoOffYInPageWithOffYIndex:(NSInteger)offyIndex WithOffCountInPage:(NSInteger)offCountInPage
-{
+- (int)gotoOffYInPageWithOffYIndex:(NSInteger)offyIndex WithOffCountInPage:(NSInteger)offCountInPage {
     //页码内跳转
-    
-//    NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", self.webView.frame.size.height, self.webView.frame.size.width];
-//    [self.webView stringByEvaluatingJavaScriptFromString:insertRule1];
-    
     if(offyIndex >= offCountInPage)
     {
         offyIndex = offCountInPage - 1;
@@ -71,10 +65,9 @@
     self.currentOffYIndexInPage = offyIndex;
     float pageOffset = offyIndex * self.webView.bounds.size.width;
     
-    //NSString* goToOffsetFunc = [NSString stringWithFormat:@" function pageScroll(yOffset){ window.scroll(yOffset,0); } "];
     NSString* goToOffsetFunc = [NSString stringWithFormat:@" function pageScroll(xOffset){ window.scroll(xOffset,0); } "];
     NSString* goTo =[NSString stringWithFormat:@"pageScroll(%f)", pageOffset];
-    
+
     [self.webView stringByEvaluatingJavaScriptFromString:goToOffsetFunc];
     [self.webView stringByEvaluatingJavaScriptFromString:goTo];
     
@@ -112,16 +105,14 @@
     
     self.epub.epubSetting.currentPageRefIndex = self.currentPageRefIndex;
     self.epub.epubSetting.currentOffYIndexInPage = self.currentOffYIndexInPage;
-    
     if (self.showFinish) {
         self.showFinish();
     }
-    
     return 1;
 }
 
 #pragma mark - ljz
-- (EPUBWebView *)webView  {
+- (EPUBWebView *)webView {
     if (!_webView) {
         _webView = [[EPUBWebView alloc] initWithFrame:CGRectMake(0, 20, DXWScreenWidth, DXWScreenHeight - 30)];
         _webView.delegate = self;
