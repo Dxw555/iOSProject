@@ -50,7 +50,8 @@
     [self.epub.epubSetting.dictPageWithOffYCount setObject:[NSString stringWithFormat:@"%@",@(offCountInPage)] forKey:[NSString stringWithFormat:@"%@",@(self.currentPageRefIndex)]];
     
     NSInteger currentOffCountInPage=[[self.epub.epubSetting.dictPageWithOffYCount objectForKey:[NSString stringWithFormat:@"%@",@(self.currentPageRefIndex)]] integerValue];
-    if (self.isPrePage) {
+    if (self.isPrePage)
+    {
         self.currentOffYIndexInPage = currentOffCountInPage - 1;
     }
     [self gotoOffYInPageWithOffYIndex:self.currentOffYIndexInPage WithOffCountInPage:offCountInPage];
@@ -77,7 +78,7 @@
     NSString *themeBodyColor=[self.epub.epubSetting.arrTheme[self.epub.epubSetting.themeIndex] objectForKey:@"bodycolor"];
     NSString *bodycolor= [NSString stringWithFormat:@"addCSSRule('body', 'background-color: %@;')",themeBodyColor];
     [self.webView stringByEvaluatingJavaScriptFromString:bodycolor];
-//
+
 //    //NSString *textcolor1=[NSString stringWithFormat:@"addCSSRule('h1', 'color: #ffffff;')"];
     NSString *themeTextColor=[self.epub.epubSetting.arrTheme[self.epub.epubSetting.themeIndex] objectForKey:@"textcolor"];
     NSString *textcolor1=[NSString stringWithFormat:@"addCSSRule('h1', 'color: %@;')",themeTextColor];
@@ -87,17 +88,13 @@
     NSString *textcolor2=[NSString stringWithFormat:@"addCSSRule('p', 'color: %@;')",themeTextColor];
     [self.webView stringByEvaluatingJavaScriptFromString:textcolor2];
     
-    //刷新显示文本
-//    [self refresh];
-    //
-    //    //刷新 epubVC Head,Foot
-    //    [self.epubVC refreshChapterLabel];
     
     NSInteger currentPageRefIndex = self.currentPageRefIndex;
     NSInteger currentOffYIndexInPage = self.currentOffYIndexInPage;
     NSMutableDictionary *dictPageWithOffYCount = self.epub.epubSetting.dictPageWithOffYCount;
     NSInteger currentPageCount = [[dictPageWithOffYCount objectForKey:[NSString stringWithFormat:@"%@",@(currentPageRefIndex)]] integerValue];
-    if (currentPageCount < 1) {
+    if (currentPageCount < 1)
+    {
         currentPageCount = 1;
     }
     
@@ -105,7 +102,8 @@
     
     self.epub.epubSetting.currentPageRefIndex = self.currentPageRefIndex;
     self.epub.epubSetting.currentOffYIndexInPage = self.currentOffYIndexInPage;
-    if (self.showFinish) {
+    if (self.showFinish)
+    {
         self.showFinish();
     }
     return 1;

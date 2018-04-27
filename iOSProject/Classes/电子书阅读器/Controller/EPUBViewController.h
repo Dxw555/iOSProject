@@ -11,7 +11,7 @@
 
 @interface EPUBViewController : UIViewController
 
-@property (nonatomic, copy) void(^showFinish)();
+@property (nonatomic, copy) void(^showFinish)(void);
 
 /** epubModel */
 @property (nonatomic , strong) EPUBModel *epub;
